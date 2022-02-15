@@ -18,7 +18,6 @@ public class HelloWorld {
         System.out.print("\n");
         // ^ same as
             // System.out.println("Hello, World!");
-
     }
 
 }
