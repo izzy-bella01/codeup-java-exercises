@@ -18,6 +18,33 @@ public class HelloWorld {
         System.out.print("\n");
         // ^ same as
             // System.out.println("Hello, World!");
+
+        // SYSTEMS, DATA TYPES AND VARIABLES
+
+        //E1
+        int myFavoriteNumber;
+        myFavoriteNumber = 7;
+        System.out.println(myFavoriteNumber);
+
+        //E2
+        String myString;
+        myString = "i love lifting!";
+        System.out.println(myString);
+
+        //E3
+        //myString = 'c';
+            // --> does not work bc it is a String data type, not a char data type
+
+        //E4
+        //myString = 3.14159;
+            // --> does not work bc it is a String data type, not a float data type
+
+        //E5
+        long myNumber;
+        //System.out.println(myNumber); --> does not run bs there is no value assigned to myNumber
+
+
+
     }
 
 }
