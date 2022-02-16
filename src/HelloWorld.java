@@ -41,9 +41,76 @@ public class HelloWorld {
 
         //E5
         long myNumber;
-        //System.out.println(myNumber); --> does not run bs there is no value assigned to myNumber
+        //System.out.println(myNumber);
+            // --> does not run bc there is no value assigned to myNumber
 
+        //E6
+        //myNumber = 3.14;
+            // --> does not work bc 3.14 has a decimal and myNumber is set to a long
 
+        //E7
+        //myNumber = 123L;
+        //System.out.println(myNumber); // works for some reason
+
+        //E8
+        myNumber = 123;
+
+        //E9
+        //float myNumber;
+        //myNumber = 3.14;
+            // --> would work if myNumber was declared as a float at the very first instance of it, or cast myNumber to float
+
+        //E10
+        //int x = 5;
+        //System.out.println(x++); --> 5
+        //System.out.println(x); --> 6
+        // --> why? code adds one AFTER 5 has been logged
+
+            //--------
+
+        //int x = 5;
+        //System.out.println(++x); --> 6
+        //System.out.println(x); --> 6
+            // --> why? code adds one BEFORE 5 has been logged
+
+        //E11
+        //String class; --> class is a reserved word, meaning it cannot be used
+
+        //E12
+        //String theNumberThree = "three";
+        //Object o = theNumberThree;
+        //int three = (int) o;
+        //System.out.println(three);
+            // --> String cannot be cast to an Integer
+
+        //int three = (int) "three";
+        //System.out.println(three);
+            // String cannot be cast to an int
+
+        //E13
+        //int x = 4;
+        ////x = x + 5;
+        //System.out.println(x+=5);
+
+        //--------
+        //int x = 3;
+        //int y = 4;
+        ////y = y * x;
+        //System.out.println(y*=x);
+
+        //--------
+        //int x = 10;
+        //int y = 2;
+        ////x = x / y;
+        //System.out.println(x/=y);
+        ////y = y - x;
+        //System.out.println(y-=x);
+
+        //E14
+        //byte num;
+        //num = 250;
+            // --> assigning a value to a smaller data type does not work
+            // --> if assigned to a data type that is larger it will work, but it may not be ideal for system runtime
 
     }
 
