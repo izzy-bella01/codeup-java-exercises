@@ -37,7 +37,7 @@ public class HelloWorld {
 
         //E4
         //myString = 3.14159;
-            // --> does not work bc it is a String data type, not a float data type
+            // --> does not work bc it is a String data type, not a double data type
 
         //E5
         long myNumber;
@@ -58,7 +58,7 @@ public class HelloWorld {
         //E9
         //float myNumber;
         //myNumber = 3.14;
-            // --> would work if myNumber was declared as a float at the very first instance of it, or cast myNumber to float
+            // --> would work if myNumber was declared as a double at the very first instance of it, or cast myNumber to float
 
         //E10
         //int x = 5;
@@ -90,21 +90,21 @@ public class HelloWorld {
         //E13
         //int x = 4;
         ////x = x + 5;
-        //System.out.println(x+=5);
+        //System.out.println(x+=5); --> 9
 
         //--------
         //int x = 3;
         //int y = 4;
         ////y = y * x;
-        //System.out.println(y*=x);
+        //System.out.println(y*=x); --> 12
 
         //--------
         //int x = 10;
         //int y = 2;
         ////x = x / y;
-        //System.out.println(x/=y);
+        //System.out.println(x/=y); --> 5
         ////y = y - x;
-        //System.out.println(y-=x);
+        //System.out.println(y-=x); --> -8
 
         //E14
         //byte num;
