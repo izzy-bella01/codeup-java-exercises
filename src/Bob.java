@@ -3,7 +3,8 @@ import java.util.Scanner;
 public class Bob {
     public static void main(String[] args) {
 
-        String userInput = "";
+        Scanner scanner = new Scanner(System.in);
+        String userInput;
 
         do {
             Scanner bobConvo = new Scanner(System.in);
@@ -14,14 +15,13 @@ public class Bob {
                 System.out.println("Sure.");
             } else if (talk.endsWith("!")) {
                 System.out.println("Woah, chill out!");
-            } else if (talk.equals("")) {
+            } else if (talk.equals("") || talk.equals(" ")) {
                 System.out.println("Fine. Be that way!");
             } else {
                 System.out.println("Whatever.");
             }
-            Scanner continueConvo = new Scanner(System.in);
-            System.out.print("Would you like to continue?  [y/N] ");
-            userInput = continueConvo.nextLine();
+            System.out.print("Would you like to continue?  [y/n] ");
+            userInput = scanner.nextLine();
         } while (userInput.equals("y"));
     }
 }
