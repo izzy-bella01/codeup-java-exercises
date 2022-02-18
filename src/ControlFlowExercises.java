@@ -89,19 +89,15 @@ public class ControlFlowExercises {
 
 //  --------------GRADES-------------------
 
-//        Scanner start = new Scanner(System.in);
-//
-//        System.out.print("Want to see your grade? [y/n]: ");
-//        String showGrade = start.next();
-
-//        while(showGrade.equals("y")) {
+        Scanner start = new Scanner(System.in);
+         System.out.print("Want to see your grade? [y/n]: ");
+         String showGrade = start.next();
+         String userInput = "";
 
             Scanner grades = new Scanner(System.in);
             do {
                 System.out.print("Enter a grade 0 - 100: ");
                 int userNum = grades.nextInt();
-
-                //            if (showGrade.equals("y")) {
                 if (userNum <= 100 && userNum >= 88) {
                     System.out.println("A");
                 } else if (userNum <= 87 && userNum >= 80) {
@@ -113,58 +109,11 @@ public class ControlFlowExercises {
                 } else if (userNum <= 59 && userNum >= 0) {
                     System.out.println("F");
                 }
-            } while ();
-//                Scanner continueGrade = new Scanner(System.in);
-//                System.out.print("Would you like to continue?  [y/N] ");
-//                String userInput = continueGrade.next();
-//                while (userInput.equals("y")) {
-//                    System.out.print("What grade? ");
-//                    grades.nextInt();
-//                }
-            //}
-        //}
+                Scanner continueGrade = new Scanner(System.in);
+                System.out.print("Would you like to continue?  [y/N] ");
+                userInput = continueGrade.next();
 
-
-
-//        Scanner grades = new Scanner(System.in);
-//        System.out.print("Enter a grade 0 - 100: ");
-//        int userNum = grades.nextInt();
-//
-//        while (showGrade.equals("y")) {
-//            if(userNum <= 100 && userNum >= 88) {
-//                System.out.println("A");
-//            } else if (userNum <= 87 && userNum >= 80) {
-//                System.out.println("B");
-//            } else if (userNum <= 79 && userNum >= 67) {
-//                System.out.println("C");
-//            } else if (userNum <= 66 && userNum >= 60) {
-//                System.out.println("D");
-//            } else if (userNum <= 59 && userNum >= 0) {
-//                System.out.println("F");
-//            }
-////            Scanner continueGrade = new Scanner(System.in);
-//            System.out.print("Would you like to continue?  [y/N] ");
-//            userNum = grades.nextInt();
-//
-//        }
-
-//        Scanner continueGrade = new Scanner(System.in);
-//        System.out.print("Would you like to continue?  [y/N] ");
-//        userNum = grades.nextInt();
-
-//        String userInput = continueGrade.next();
-
-//        if(userNum <= 100 && userNum >= 88) {
-//            System.out.println("A");
-//        } else if (userNum <= 87 && userNum >= 80) {
-//            System.out.println("B");
-//        } else if (userNum <= 79 && userNum >= 67) {
-//            System.out.println("C");
-//        } else if (userNum <= 66 && userNum >= 60) {
-//            System.out.println("D");
-//        } else if (userNum <= 59 && userNum >= 0) {
-//            System.out.println("F");
-//        }
+            } while (userInput.equals("y"));
 
     }
 }
