@@ -20,5 +20,8 @@ public class LectureEnvironment {
 
         System.out.println("Arithmetic.add(3,6) = " + Arithmetic.add(3,6));
         System.out.println("Arithmetic.multiply(4,8) = " + Arithmetic.multiply(4, 8));
+
+        Person mcPerson = new Person("Kurt", "Vonnegut", 60, "taken");
+        System.out.println(mcPerson.shareAge());
     }
 }

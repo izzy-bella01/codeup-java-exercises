@@ -60,13 +60,13 @@ public class MethodsExercises {
         int userInput = enterFact.nextInt();
         long factorial = 1;
 
-        String print = "= 1";
-        String print1 = "";
+
+        String print = "";
         if (userInput >= 1 && userInput <= 10) {
             for (int i = 1; i <= userInput; i++) {
                 factorial *= i;
-                print1 +=" x " + i;
-                System.out.printf("%s! %s%s = %s%n", i, print, print1, factorial);
+                print += " x " + i;
+                System.out.printf("%s! = %s = %s%n", i, print, factorial);
             }
 //            System.out.println(print);
 
