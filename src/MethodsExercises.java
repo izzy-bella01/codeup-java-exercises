@@ -64,11 +64,11 @@ public class MethodsExercises {
         if (userInput >= 1 && userInput <= 10) {
             for (int i = 1; i <= userInput; i++) {
                 factorial *= i;
+                print +=" x " + i;
 //                String print = "";
-                System.out.printf("%s! = %s%n", i, factorial);
-                print += " x " + i;
+                System.out.printf("%s! %s = %s%n", i, print, factorial);
             }
-            System.out.println(print);
+//            System.out.println(print);
 
         }
         //1! = 1               = 1
