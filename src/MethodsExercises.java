@@ -68,15 +68,6 @@ public class MethodsExercises {
                 print += " x " + i;
                 System.out.printf("%s! = %s = %s%n", i, print, factorial);
             }
-//            System.out.println(print);
-
         }
-        //1! = 1               = 1
-        //2! = 1 x 2           = 2
-        //3! = 1 x 2 x 3       = 6
-        //4! = 1 x 2 x 3 x 4   = 24
-
     }
-
-
 }
