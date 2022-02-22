@@ -1,3 +1,4 @@
+import java.io.PrintStream;
 import java.util.Scanner;
 
 public class MethodsExercises {
@@ -10,10 +11,10 @@ public class MethodsExercises {
 //        System.out.println("remainder: " + modulus(50,5));
 
 // 2. CREATE A METHOD THAT VALIDATES THAT USER INPUT IS IN A CERTAIN RANGE
-//        getInteger();
-//        System.out.print("Enter a number between 1 and 10: ");
-        getInteger(1, 10);
+//        getInteger(1, 16);
 
+// 3. CALCULATE THE FACTORIAL OF A NUMBER
+        factorialClass();
 
     }
 // 1. BASIC ARITHMETIC
@@ -38,26 +39,44 @@ public class MethodsExercises {
 //    }
 
 // 2. CREATE A METHOD THAT VALIDATES THAT USER INPUT IS IN A CERTAIN RANGE
-    public static void getInteger(int min, int max) {
-        Scanner validate = new Scanner(System.in);
-        System.out.print("Enter a number between 1 and 10: ");
-        int userInput = validate.nextInt();
+//    public static void getInteger(int min, int max) {
+//        Scanner validate = new Scanner(System.in);
+//        System.out.print("Enter a number between " + min + " and " + max +": ");
+//        int userInput = validate.nextInt();
+//
+//        if(userInput >= min && userInput <= max) {
+//            System.out.println("success");
+//        } else {
+//            System.out.println("no success");
+//            getInteger(min,max);
+//        }
+//    }
 
-        if(userInput >= min || userInput <= max) {
-            System.out.println("success");
-            return;
-        } else {
+// 3. CALCULATE THE FACTORIAL OF A NUMBER
+    public static void factorialClass() {
+        Scanner enterFact = new Scanner(System.in);
+        System.out.print("Enter a number between 1 and 10: ");
+
+        int userInput = enterFact.nextInt();
+        long factorial = 1;
+
+        String print = "";
+        if (userInput >= 1 && userInput <= 10) {
+            for (int i = 1; i <= userInput; i++) {
+                factorial *= i;
+//                String print = "";
+                System.out.printf("%s! = %s%n", i, factorial);
+                print += " x " + i;
+            }
+            System.out.println(print);
 
         }
-            getInteger(min,max);
+        //1! = 1               = 1
+        //2! = 1 x 2           = 2
+        //3! = 1 x 2 x 3       = 6
+        //4! = 1 x 2 x 3 x 4   = 24
+
     }
 
-//        public static void count(int n) { // 5
-//        if (n <= 0) {
-//            System.out.println("All done!");
-//            return; // exits
-//        }
-//        System.out.println(n); // 5
-//        count(n - 1); // calling this method inside itself AND decrementing
-//    }
+
 }
