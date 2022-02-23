@@ -1,4 +1,5 @@
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class MethodsExercises {
@@ -17,6 +18,7 @@ public class MethodsExercises {
 //        factorialClass();
 
 // 4. CREATE AN APPLICATION THAT SIMULATES DICE ROLLING
+//        diceRoll();
 
 
     }
@@ -84,7 +86,31 @@ public class MethodsExercises {
 
 
 // 4. CREATE AN APPLICATION THAT SIMULATES DICE ROLLING
-
+//    public static void diceRoll() {
+//        System.out.print("Enter number of sides of dice: ");
+//        Scanner diceSide = new Scanner(System.in);
+//        int sides = diceSide.nextInt();
+//
+//        System.out.print("Type 'roll' to roll the dice: ");
+//        Scanner rollDice = new Scanner(System.in);
+//        String roll = rollDice.nextLine();
+//
+//        if (roll.equals("roll")) {
+//            int diceOne = (int)(Math.random()*sides);
+//            int diceTwo = (int)(Math.random()*sides);
+//            System.out.println("diceOne = " + diceOne);
+//            System.out.println("diceTwo = " + diceTwo);
+//
+//            System.out.println("continue? y/n");
+//            Scanner continueFact = new Scanner(System.in);
+//            String answer = continueFact.nextLine();
+//            if (answer.equals("y")) {
+//                diceRoll();
+//            } else {
+//                System.out.println("Goodbye");
+//            }
+//        }
+//    }
 
 
 }
