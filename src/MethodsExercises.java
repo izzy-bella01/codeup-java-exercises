@@ -1,4 +1,4 @@
-import java.io.PrintStream;
+
 import java.util.Scanner;
 
 public class MethodsExercises {
@@ -14,7 +14,10 @@ public class MethodsExercises {
 //        getInteger(1, 16);
 
 // 3. CALCULATE THE FACTORIAL OF A NUMBER
-        factorialClass();
+//        factorialClass();
+
+// 4. CREATE AN APPLICATION THAT SIMULATES DICE ROLLING
+
 
     }
 // 1. BASIC ARITHMETIC
@@ -53,21 +56,35 @@ public class MethodsExercises {
 //    }
 
 // 3. CALCULATE THE FACTORIAL OF A NUMBER
-    public static void factorialClass() {
-        Scanner enterFact = new Scanner(System.in);
-        System.out.print("Enter a number between 1 and 10: ");
+//    public static void factorialClass() {
+//        Scanner enterFact = new Scanner(System.in);
+//        System.out.print("Enter a number between 1 and 10: ");
+//
+//        int userInput = enterFact.nextInt();
+//        long factorial = 1;
+//
+//
+//        String print = "";
+//        if (userInput >= 1 && userInput <= 10) {
+//            for (int i = 1; i <= userInput; i++) {
+//                factorial *= i;
+//                print += " x " + i;
+//                System.out.printf("%s! = %s = %s%n", i, print, factorial);
+//            }
+//            System.out.println("continue? y/n");
+//            Scanner continueFact = new Scanner(System.in);
+//            String answer = continueFact.nextLine();
+//            if (answer.equals("y")) {
+//                factorialClass();
+//            } else {
+//                System.out.println("Goodbye");
+//            }
+//        }
+//    }
 
-        int userInput = enterFact.nextInt();
-        long factorial = 1;
+
+// 4. CREATE AN APPLICATION THAT SIMULATES DICE ROLLING
 
 
-        String print = "";
-        if (userInput >= 1 && userInput <= 10) {
-            for (int i = 1; i <= userInput; i++) {
-                factorial *= i;
-                print += " x " + i;
-                System.out.printf("%s! = %s = %s%n", i, print, factorial);
-            }
-        }
-    }
+
 }
