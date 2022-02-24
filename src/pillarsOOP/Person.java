@@ -32,4 +32,8 @@ public class Person {
         return this.age;
     }
 
+    public String getName() {
+        return name;
+    }
+
 }
