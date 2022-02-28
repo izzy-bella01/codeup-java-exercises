@@ -18,12 +18,13 @@ public class ArraysExercises {
         for (Person p : peopleArr) {
             System.out.println(p.getName());
         }
-// --------------------------------------------------------------------
-
-    addPerson();
-
+//// --------------------------------------------------------------------
+//        Person[] morePersons = {"person1", "person2","person3"};
+//        addPerson();
     }
-    public static void addPerson(Person[] peopleArr) {
-        System.out.println(peopleArr);
+    public static void addPerson(Person[] arr, Person obj) {
+        Person[] newArr = Arrays.copyOf(arr, arr.length + 1);
+        newArr[newArr.length - 1] = obj;
     }
+
 }
