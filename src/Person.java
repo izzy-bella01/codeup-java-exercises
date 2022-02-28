@@ -2,7 +2,11 @@ public class Person {
 
     private String name;
 
-// METHODS
+    public Person() {
+
+    }
+
+    // METHODS
     public String getName(){
 //TODO: return the person's name
         return name;
