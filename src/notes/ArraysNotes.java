@@ -166,7 +166,7 @@ public class ArraysNotes {
         Arrays.sort(randomNumsArr);
         System.out.println(Arrays.toString(randomNumsArr));
 
-        // TWO DIMENSIONAL ARRAYS
+        // TWO DIMENSIONAL/MATRIX/NESTED ARRAYS
         int[][] myMatrix = {
             {1,2,3},
             {4,5,6},
