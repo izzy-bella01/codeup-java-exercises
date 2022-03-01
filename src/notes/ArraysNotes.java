@@ -166,9 +166,26 @@ public class ArraysNotes {
         Arrays.sort(randomNumsArr);
         System.out.println(Arrays.toString(randomNumsArr));
 
-        // NESTED ARRAYS
+        // TWO DIMENSIONAL ARRAYS
+        int[][] myMatrix = {
+            {1,2,3},
+            {4,5,6},
+            {7,8,9}
+        };
+        System.out.println(myMatrix[2][0]);
+        // print out every nested element
+        // do a loop
+        // do another loop
 
-    }
+        for(int[] rows : myMatrix) {
+            System.out.println("-----------this is a new row------------");
+            for(int column : rows) {
+                System.out.println(column);
+            }
+        }
+
+
+    } // end of main method
 
     public static int sumAll() {
         int[] nums = {1, 5, 34, 67, 89};
