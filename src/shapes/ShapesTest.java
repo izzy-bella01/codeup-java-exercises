@@ -16,7 +16,6 @@ public class ShapesTest {
         System.out.println("myRectangleShape Perimeter: " + myRectangleShape.getPerimeter());
 
 
-
         // 9. Why does the code fail to compile if you leave off the getPerimeter method in Rectangle?
         // ---> Rectangle is not abstract and doesn't override getPerimeter in Measurable
 
