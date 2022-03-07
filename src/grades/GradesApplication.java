@@ -44,24 +44,38 @@ public class GradesApplication {
             System.out.printf( "| %s | ", usernameKey );
         }
 
-        System.out.println("\n\nWhat student would you like to see more of?");
-        Scanner selectStu = new Scanner(System.in);
-        String userAnswer = selectStu.nextLine();
+        String yesOrNo = "";
 
-        for ( String usernameKey : Students.keySet() ) {
-            Student stuObj = Students.get(usernameKey);
-            String stuObjName = stuObj.getName();
-            double stuObjGrade = stuObj.getGradeAverage();
-            if(userAnswer.equals(usernameKey)) {
-                System.out.printf("Name: %s --- Github Username: %s%n", stuObjName, usernameKey);
+        do {
+            System.out.println("\n\nWhat student would you like to see more of?");
+            Scanner selectStu = new Scanner(System.in);
+            String userAnswer = selectStu.nextLine();
+
+            Student output = Students.get(userAnswer);
+
+            if (output == null) {
+                System.out.println("Sorry, no student found with the name: " + userAnswer);
+
+                System.out.println("\n\nWould you like to see another student? ");
+                Scanner anotherStu = new Scanner(System.in);
+                yesOrNo = anotherStu.nextLine();
+            } else {
+                Student stuObj = Students.get(userAnswer);
+                String stuObjName = stuObj.getName();
+                double stuObjGrade = stuObj.getGradeAverage();
+
+                System.out.printf("Name: %s --- Github Username: %s%n", stuObjName, userAnswer);
                 System.out.printf("Current Average: %s", stuObjGrade);
+
+                System.out.println("\n\nWould you like to see another student? ");
+                Scanner anotherStu = new Scanner(System.in);
+                yesOrNo = anotherStu.nextLine();
             }
 
-        }
+            if(!yesOrNo.equals("y")) {
+                System.out.println("Goodbye and have a wonderful day!");
+            }
+        } while (yesOrNo.equals("y"));
 
-
-
-
-
-    }
+    } // end of main method
 }
