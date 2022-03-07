@@ -1,8 +1,6 @@
 package grades;
 
-import javax.swing.*;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 
 public class GradesApplication {
