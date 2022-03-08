@@ -53,7 +53,13 @@ public class GroceryApp {
                 System.out.println("Okay, goodbye");
             }
 
-            System.out.println("Would you like add another item? ");
+            System.out.println("Would you like to see a list? ");
+            String seeList = scanner.next();
+            if (seeList.equals("yes")) {
+                System.out.println(FruitVeggie.groceries);
+            }
+
+            System.out.println("Would you like add another item or exit?");
             Scanner anotherItem = new Scanner(System.in);
             addMore = anotherItem.nextLine();
 
@@ -63,5 +69,7 @@ public class GroceryApp {
 
     public static void main(String[] args) {
         makeGroceries();
+
+
     }
 }
