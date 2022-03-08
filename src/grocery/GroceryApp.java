@@ -2,6 +2,7 @@ package grocery;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Scanner;
 
 import static util.Input.scanner;
 
@@ -15,14 +16,13 @@ public class GroceryApp {
     static GroceryList Frozen = new GroceryList();
 
     public static void makeGroceries() {
+        System.out.println("Would you like to create a grocery list? ");
+        String createList = scanner.next();
         String addMore;
         do {
-            System.out.println("Would you like to create a grocery list? ");
-            String createList = scanner.nextLine();
-
             if (createList.equals("yes")) {
                 System.out.println("Would you like to enter a new item? ");
-                String createItem = scanner.nextLine();
+                String createItem = scanner.next();
 
                 if(createItem.equals("yes")) {
                     System.out.println("CHOOSE FROM THE LIST OF CATEGORIES: ");
@@ -53,8 +53,9 @@ public class GroceryApp {
                 System.out.println("Okay, goodbye");
             }
 
-            System.out.println("Do you want to add another item?");
-            addMore = scanner.nextLine();
+            System.out.println("Would you like add another item? ");
+            Scanner anotherItem = new Scanner(System.in);
+            addMore = anotherItem.nextLine();
 
         } while(addMore.equals("yes"));
     }

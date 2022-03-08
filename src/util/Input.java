@@ -37,8 +37,18 @@ public class Input {
 
     public static int getInt() {
         System.out.print("Enter a number: ");
-        int userInput = scanner.nextInt();
-        return userInput;
+//        int userInput = scanner.nextInt();
+        String userInput = getString();
+
+        try {
+            Integer.valueOf(userInput);
+        } catch (NumberFormatException ex1){
+            System.out.println("error occurred");
+
+        }
+
+        return Integer.valueOf(userInput);
+
     }
 
     public static double getDouble(double min, double max) {
@@ -56,8 +66,17 @@ public class Input {
 
     public static double getDouble() {
         System.out.print("Enter a decimal number: ");
-        double userInput = scanner.nextDouble();
-        return userInput;
+//        double userInput = scanner.nextDouble();
+        String userInput = getString();
+
+        try {
+            Double.valueOf(userInput);
+        } catch (NumberFormatException ex1){
+            System.out.println("error occurred");
+
+        }
+
+        return Double.valueOf(userInput);
     }
 
 }
