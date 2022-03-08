@@ -7,16 +7,14 @@ import static util.Input.scanner;
 
 public class GroceryApp {
 
-    public static GroceryList FruitVeggie = new GroceryList();
-    GroceryList MeatSeafood = new GroceryList();
-    GroceryList Bakery = new GroceryList();
-    GroceryList Dairy = new GroceryList();
-    GroceryList Deli = new GroceryList();
-    GroceryList Frozen = new GroceryList();
+    static GroceryList FruitVeggie = new GroceryList();
+    static GroceryList MeatSeafood = new GroceryList();
+    static GroceryList Bakery = new GroceryList();
+    static GroceryList Dairy = new GroceryList();
+    static GroceryList Deli = new GroceryList();
+    static GroceryList Frozen = new GroceryList();
 
-
-
-    public static void main(String[] args) {
+    public static void makeGroceries() {
         System.out.println("Would you like to create a grocery list? ");
         String createList = scanner.nextLine();
 
@@ -35,13 +33,33 @@ public class GroceryApp {
                 int category = scanner.nextInt();
                 if (category == 1) {
                     FruitVeggie.addGrocery();
+                } else if (category == 2) {
+                    MeatSeafood.addGrocery();
+                } else if (category == 3) {
+                    Bakery.addGrocery();
+                } else if (category == 4) {
+                    Dairy.addGrocery();
+                } else if (category == 5) {
+                    Deli.addGrocery();
+                }  else if (category == 6) {
+                    Frozen.addGrocery();
                 }
+
+
+//                System.out.println("Do you want to add another item?");
+//                String addMore = scanner.nextLine();
+//                if (addMore.equals("yes")) {
+//                    makeGroceries();
+//                }
             } else {
                 System.out.println("Okay, goodbye");
             }
         } else {
             System.out.println("Okay, goodbye");
         }
+    }
 
+    public static void main(String[] args) {
+        makeGroceries();
     }
 }

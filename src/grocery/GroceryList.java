@@ -13,13 +13,14 @@ public class GroceryList {
 
     public void addGrocery() {
         System.out.print("enter name of item: ");
-        String item = scanner.next();
+        String item = scanner.nextLine(); scanner.nextLine();
 
         System.out.print("enter quantity: ");
         int quantity = scanner.nextInt();
 
         this.groceries.put(item, quantity);
     }
+
 
 
 }
