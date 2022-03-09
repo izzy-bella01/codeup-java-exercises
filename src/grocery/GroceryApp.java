@@ -19,11 +19,10 @@ public class GroceryApp {
         System.out.println("Would you like to create a grocery list? ");
         String createList = scanner.next();
         String addMore;
-        do {
-            if (createList.equals("yes")) {
-                System.out.println("Would you like to enter a new item? ");
-                String createItem = scanner.next();
-
+        if (createList.equals("yes")) {
+            System.out.println("Would you like to enter a new item? ");
+            String createItem = scanner.next();
+            do {
                 if(createItem.equals("yes")) {
                     System.out.println("CHOOSE FROM THE LIST OF CATEGORIES: ");
                     System.out.println("1. fruit & vegetable \n" +
@@ -49,21 +48,42 @@ public class GroceryApp {
                 } else {
                     System.out.println("Okay, goodbye");
                 }
-            } else {
-                System.out.println("Okay, goodbye");
-            }
 
-            System.out.println("Would you like to see a list? ");
-            String seeList = scanner.next();
-            if (seeList.equals("yes")) {
-                System.out.println(FruitVeggie.groceries);
-            }
+                System.out.println("Would you like to see a list? ");
+                String seeList = scanner.next();
+                if (seeList.equals("yes")) {
+                    System.out.println("Which list would you like to see? ");
+                    System.out.println("1. fruit & vegetable \n" +
+                            "2. meat & seafood \n" +
+                            "3. bakery & bread \n" +
+                            "4. dairy \n" +
+                            "5. deli \n" +
+                            "6. frozen \n");
+                    int listNum = scanner.nextInt();
+                    if(listNum == 1) {
+                        FruitVeggie.showList();
+                    } else if (listNum == 2) {
+                        MeatSeafood.showList();
+                    } else if (listNum == 3) {
+                        Bakery.showList();
+                    }  else if (listNum == 4) {
+                        Dairy.showList();
+                    } else if (listNum == 5) {
+                        Deli.showList();
+                    }  else if (listNum == 6) {
+                        Frozen.showList();
+                    }
+                }
 
-            System.out.println("Would you like add another item or exit?");
-            Scanner anotherItem = new Scanner(System.in);
-            addMore = anotherItem.nextLine();
+                System.out.println("Would you like add another item or exit?");
+                Scanner anotherItem = new Scanner(System.in);
+                addMore = anotherItem.nextLine();
 
-        } while(addMore.equals("yes"));
+            } while(addMore.equals("add"));
+
+        } else {
+            System.out.println("Okay, goodbye");
+        }
     }
 
 

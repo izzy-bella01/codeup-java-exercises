@@ -22,7 +22,11 @@ public class GroceryList {
     }
 
     public void showList() {
-
+        for (String name: groceries.keySet()) {
+            String key = name;
+            String value = groceries.get(name).toString();
+            System.out.println(key + " : " + value);
+        }
     }
 
 
