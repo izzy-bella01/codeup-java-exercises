@@ -102,6 +102,14 @@ public class LectureEnvironment {
 
         // update grocery list
         Files.write(dataDirectoryAndFile, newList);
+        System.out.println("printGroceryList = " + printGroceryList);
+
+        // this is to see the list in a numerical way as done above
+        for(int i = 0; i < newList.size(); i++) {
+            System.out.println((i + 1) + ": " + newList.get(i));
+        }
+
+
 
     }
 }
