@@ -32,18 +32,21 @@ public class GroceryApp {
                             "5. deli \n" +
                             "6. frozen \n");
                     int category = scanner.nextInt();
-                    if (category == 1) {
-                        FruitVeggie.addGrocery();
-                    } else if (category == 2) {
-                        MeatSeafood.addGrocery();
-                    } else if (category == 3) {
-                        Bakery.addGrocery();
-                    } else if (category == 4) {
-                        Dairy.addGrocery();
-                    } else if (category == 5) {
-                        Deli.addGrocery();
-                    }  else if (category == 6) {
-                        Frozen.addGrocery();
+                    switch (category) {
+                        case 1: FruitVeggie.addGrocery();
+                            break;
+                        case 2: MeatSeafood.addGrocery();
+                            break;
+                        case 3: Bakery.addGrocery();
+                            break;
+                        case 4: Dairy.addGrocery();
+                            break;
+                        case 5: Deli.addGrocery();
+                            break;
+                        case 6: Frozen.addGrocery();
+                            break;
+                        default:
+                            break;
                     }
                 } else {
                     System.out.println("Okay, goodbye");
@@ -60,22 +63,26 @@ public class GroceryApp {
                             "5. deli \n" +
                             "6. frozen \n");
                     int listNum = scanner.nextInt();
-                    if(listNum == 1) {
-                        FruitVeggie.showList();
-                    } else if (listNum == 2) {
-                        MeatSeafood.showList();
-                    } else if (listNum == 3) {
-                        Bakery.showList();
-                    }  else if (listNum == 4) {
-                        Dairy.showList();
-                    } else if (listNum == 5) {
-                        Deli.showList();
-                    }  else if (listNum == 6) {
-                        Frozen.showList();
+                    switch (listNum) {
+                        case 1: FruitVeggie.showList();
+                            break;
+                        case 2: MeatSeafood.showList();
+                            break;
+                        case 3: Bakery.showList();
+                            break;
+                        case 4: Dairy.showList();
+                            break;
+                        case 5: Deli.showList();
+                            break;
+                        case 6: Frozen.showList();
+                            break;
+                        default:
+                            break;
                     }
                 }
 
-                System.out.println("Would you like add another item or exit?");
+                System.out.println("Would you like add another item or exit? \n" +
+                        "Type \"add\" or \"exit\": ");
                 Scanner anotherItem = new Scanner(System.in);
                 addMore = anotherItem.nextLine();
 
@@ -89,7 +96,5 @@ public class GroceryApp {
 
     public static void main(String[] args) {
         makeGroceries();
-
-
     }
 }
