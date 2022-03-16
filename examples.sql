@@ -43,3 +43,6 @@ SHOW CREATE DATABASE database_name;
 -- Deleting a Database
 DROP DATABASE database_name;
 DROP DATABASE IF EXISTS database_name;
+
+-- CODEUP TEST USER
+codeup_test_user - codeuptestuser
