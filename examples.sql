@@ -46,3 +46,68 @@ DROP DATABASE IF EXISTS database_name;
 
 -- CODEUP TEST USER
 codeup_test_user - codeuptestuser
+
+-- Creating Tables
+CREATE TABLE table_name (
+    column1_name data_type,
+    column2_name data_type,
+    ...
+);
+
+CREATE TABLE quotes (
+    author_first_name VARCHAR(50),
+    author_last_name  VARCHAR(100) NOT NULL,
+    content TEXT NOT NULL
+);
+
+-- Primary Keys
+CREATE TABLE quotes (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    author_first_name VARCHAR(50),
+    author_last_name  VARCHAR(100) NOT NULL,
+    content TEXT NOT NULL,
+    PRIMARY KEY (id)
+);
+
+-- Default Values
+CREATE TABLE quotes (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    author_first_name VARCHAR(50) DEFAULT 'NONE',
+    author_last_name  VARCHAR(100) NOT NULL,
+    content TEXT NOT NULL,
+    PRIMARY KEY (id)
+);
+
+-- Showing Tables
+SHOW TABLES;
++--------------------------+
+| Tables_in_codeup_test_db |
++--------------------------+
+| quotes                   |
++--------------------------+
+1 row in set (0.00 sec)
+
+-- Describing Tables
++-------------------+------------------+------+-----+---------+----------------+
+| Field             | Type             | Null | Key | Default | Extra          |
++-------------------+------------------+------+-----+---------+----------------+
+| id                | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| author_first_name | varchar(50)      | YES  |     | NULL    |                |
+| author_last_name  | varchar(100)     | NO   |     | NULL    |                |
+| content           | text             | NO   |     | NULL    |                |
++-------------------+------------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+
+SHOW CREATE TABLE quotes\G;
+
+-- Dropping Tables
+DROP TABLE quotes;
+DROP TABLE IF EXISTS quotes;
+
+-- The inverse
+CREATE TABLE IF NOT EXISTS quotes (
+    ...
+);
+
+-- SQL Scripts
+mysql -u USERNAME -p -t < filename.sql
