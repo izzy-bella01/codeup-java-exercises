@@ -47,6 +47,17 @@ DROP DATABASE IF EXISTS database_name;
 -- CODEUP TEST USER
 codeup_test_user - codeuptestuser
 
+-- regarding: a convo about unsigned and number ranges
+-- unsigned <<
+-- Unsigned is going to indicate that your column will be storing NUMS . .
+-- We have been used to, or are getting used to, the idea that a numeric data type really means a container that can store a RANGE of numbers..
+-- For example, a normal INT column can store numbers from -2,147,483,648 to 2,147,483,647
+-- By adding the word UNSIGNED to the column - we still have the same RANGE we can store . . but we’re saying “hey, MYSQL, this is going to ONLY store positive numbers”
+-- Real world example: IDS, Grades, whatever would need to be positive, tracks on an album!, inventory !
+-- Not only is it forced to be positive - but our RANGE adjusts as well
+-- 0 > 4,294,967,295
+-- Our capacity stays the same - now though, it’s ALL POSITIVE NUMBERS
+
 -- Creating Tables
 CREATE TABLE table_name (
     column1_name data_type,
